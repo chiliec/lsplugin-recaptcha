@@ -25,7 +25,7 @@ class PluginRecaptcha_HookRecaptcha extends Hook {
 
     public function Recaptcha_modal() {
         $recaptcha = recaptcha_get_html(Config::Get('plugin.recaptcha.public_key'), null, Config::Get('plugin.recaptcha.use_ssl'));
-        $this->Viewer_Assign('recaptcha', $recaptcha);
+        $this->Viewer_Assign('recaptcha_modal', $recaptcha);
         return $this->Viewer_Fetch(Plugin::GetTemplatePath(__CLASS__).'inject.recaptcha_modal.tpl');
     }
 }
