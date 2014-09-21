@@ -1,40 +1,36 @@
 <?php
-
 /* ---------------------------------------------------------------------------
  * @Plugin Name: reCAPTCHA
  * @Description: Replaces the standard captcha for reCAPTCHA
- * @Author URI: http://chiliec.ru
- * @LiveStreet Version: 0.5.1
- * @Plugin Version:	3.0.0
+ * @Author URI: http://livestreet.net
+ * @LiveStreet Version: 1.0.3
+ * @Plugin Version:	4.0.0
  * ----------------------------------------------------------------------------
+*/
+
+/**
+ * Запрещаем напрямую через браузер обращение к этому файлу.
  */
-
-if (! class_exists ( "Plugin" )) {
-	die ( "Hacking attemp!" );
+if (!class_exists('Plugin')) {
+    die('Hacking attemp!');
 }
 
-class PluginreCAPTCHA extends Plugin {
+class PluginRecaptcha extends Plugin {
 
-	public $aDelegates;
-	
-  protected $aInherits=array(
-			'action' => array(
-					'ActionRegistration'=>'_ActionRegistration'
-			),
-	);
-  public function Activate() {
-			return true;
-	}
-	
-  public function Deactivate() {
-			return true;
-  }
-  
-	public function Init() {
-			$this->aDelegates = array(
-					'template'=>array(
-							'actions/ActionRegistration/index.tpl'=>'_actions/ActionRegistration/index.tpl'
-					),
-			);		
-	}
+    protected $aInherits=array(
+        'entity'  =>array('ModuleUser_EntityUser')
+    );
+
+    public function Activate() {
+        return true;
+    }
+
+    public function Deactivate(){
+        return true;
+    }
+
+    public function Init() {
+        Config::Set('module.user.captcha_use_registration', false);
+    }
 }
+?>

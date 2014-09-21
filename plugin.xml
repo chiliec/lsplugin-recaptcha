@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin>
-        <name>
-                <lang name="default">reCAPTCHA</lang>
-                <lang name="russian">reCAPTCHA</lang>
-        </name>
-        <author>
-                <lang name="default">Chiliec</lang>
-                <lang name="russian">Chiliec</lang>
-        </author>
-        <homepage>http://livestreetcms.com/profile/chiliec/donate/</homepage>
-        <version>3.0.0</version>
-        <requires>
-                <livestreet>0.5.1</livestreet>
-                <plugins>
-					
-                </plugins>
-        </requires>
-        <description>
-                <lang name="default">Replaces the standard captcha for reCAPTCHA</lang>
-                <lang name="russian">Заменяет стандартную каптчу на reCAPTCHA</lang>
-        </description>
-		
+    <name>
+        <lang name="default">Recaptcha</lang>
+        <lang name="russian">Recaptcha</lang>
+    </name>
+    <author>
+        <lang name="default">Chiliec</lang>
+        <lang name="russian">Chiliec</lang>
+    </author>
+    <homepage>http://livestreet.net</homepage>
+    <version>4.0.0</version>
+    <requires>
+        <livestreet>1.0.3</livestreet>
+        <plugins>
+        </plugins>
+    </requires>
+    <description>
+        <lang name="default">Replaces the standard captcha for reCAPTCHA</lang>
+        <lang name="russian">Заменяет стандартную капчу на reCAPTCHA</lang>
+    </description>
 </plugin>
