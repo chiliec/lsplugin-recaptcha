@@ -30,6 +30,7 @@ class PluginRecaptcha extends Plugin {
     }
 
     public function Init() {
+		$this->Viewer_AppendScript(Plugin::GetTemplatePath(__CLASS__)."js/script.js");
         Config::Set('module.user.captcha_use_registration', false);
     }
 }
